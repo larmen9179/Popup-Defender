@@ -4,6 +4,7 @@
 
 # Ignore library files but not the gdextension file
 /bin/**
+/project/bin/*
 !project/bin/*.gdextension
 
 # Ignore scons database
@@ -50,3 +51,5 @@ compile_commands.json
 # Cmake
 cmake-build*
 CMakeUserPresets.json
+
+*build/

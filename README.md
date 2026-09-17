@@ -54,3 +54,20 @@ It triggers automatically for each pushed change. You can find and edit it in [b
 There is also a workflow ([make_build.yml](.github/workflows/make_build.yml)) that builds the GDExtension for all supported platforms that you can use to create releases.
 You can trigger this workflow manually from the `Actions` tab on GitHub.
 After it is complete, you can find the file `godot-cpp-template.zip` in the `Artifacts` section of the workflow run.
+
+### Setting up Scons for building
+It is recommended to make an environment first then do the normal pip install command through python
+
+Make sure you're in the top-level project directory first
+
+# Creating the environment
+```shell
+python3 -m venv .venv
+```
+
+# Activating the environment
+
+Windows
+```shell
+.venv\Scripts\Activate.ps1
+```
