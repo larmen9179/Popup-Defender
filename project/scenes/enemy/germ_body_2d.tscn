@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://chat2bsil26o"]
+
+[ext_resource type="Texture2D" uid="uid://8o52qduu7n63" path="res://assets/enemy/main-germ-animation/Germ-twerk.png" id="1_hmsui"]
+[ext_resource type="Script" uid="uid://cbhov0ohyq6s1" path="res://script/germ_2d.gd" id="1_wu2ue"]
+[ext_resource type="Texture2D" uid="uid://dmv7ugeh0xikl" path="res://assets/enemy/main-germ-animation/Germ-twerk-2.png" id="2_wu2ue"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2xb0"]
+atlas = ExtResource("1_hmsui")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laxf0"]
+atlas = ExtResource("2_wu2ue")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jonp1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2xb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_laxf0")
+}],
+"loop": 1,
+"name": &"Germ1",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jonp1"]
+size = Vector2(31, 25)
+
+[node name="GermBody2D" type="CharacterBody2D" unique_id=1312832672]
+position = Vector2(567, 311)
+scale = Vector2(3.5206068, 3.5206068)
+script = ExtResource("1_wu2ue")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1613746040]
+sprite_frames = SubResource("SpriteFrames_jonp1")
+animation = &"Germ1"
+frame = 1
+frame_progress = 0.5477126
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=349148148]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_jonp1")
