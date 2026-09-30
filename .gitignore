@@ -53,3 +53,5 @@ cmake-build*
 CMakeUserPresets.json
 
 *build/
+
+*.import
